@@ -1,0 +1,28 @@
+*,
+*::before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {	
+	font-family: /*neue-haas-grotesk-display,*/ Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	width: 100%;line-height: 1em;
+}
+
+body, html {
+	height: auto;
+	background-color: #0d0d0d;
+	color: white;
+}
