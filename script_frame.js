@@ -30,7 +30,7 @@ function pageLoad() {
 
 
 		/*hero title*/
-		middleSection.insertAdjacentHTML('beforeend', '<h1 class="hero-title"></h1>');
+		middleSection.insertAdjacentHTML('beforeend', `<h1 class="hero-title"></h1><div class="white-line"></div>`);
 		let heroTitle = document.querySelector('.hero-title');
 		heroTitle.innerHTML = "Art Direction <br> & Design";
 
@@ -93,12 +93,99 @@ function pageLoad() {
 				/*linkedin div*/
 				socialBarDiv.insertAdjacentHTML('beforeend', '<div class="linkedin"></div>');
 				let linkedInDiv = document.querySelector('.linkedin');
-				linkedInDiv.innerHTML = '<a href="">Li</a>';		
+				linkedInDiv.innerHTML = '<a href="">Li</a><div><img class="menu" src="./img/burger.png" alt="burger"></div>';		
 
 		/*graph article div*/
-		rightSection.insertAdjacentHTML('beforeend', '<div class="article-graph"></div>');
-		let articleGraph = document.querySelector('.article-graph');
-		articleGraph.innerHTML = "Ide jön a vonalas grafika";	
+		rightSection.insertAdjacentHTML('beforeend', `
+		<div class="article-graph"><svg id="lineall" data-name="lineall" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 291">
+		<defs>
+			<style>
+				.cls-1 {
+					fill: #5328b5;
+				}
+	
+				.cls-2 {
+					fill: #1f153d;
+				}
+	
+				.cls-3 {
+					fill: #1a1331;
+				}
+	
+				.cls-4 {
+					fill: #1e133a;
+				}
+	
+				.cls-5 {
+					fill: #3c2081;
+				}
+			</style>
+		</defs>
+		<g>
+			<g class="line5">
+				<path class="cls-1" d="M5.5,285.7h510a1.1,1.1,0,0,0,0-2.2H5.5a1.1,1.1,0,0,0,0,2.2Z"/>
+				<g>
+					<path class="cls-1" d="M515.5,284.6l167-167"/>
+					<path class="cls-1" d="M516.3,285.4l65.3-65.3,65-65,36.7-36.7c1-1-.6-2.6-1.6-1.6l-65.3,65.3-65,65-36.7,36.7c-1,1,.6,2.6,1.6,1.6Z"/>
+				</g>
+				<g>
+					<path class="cls-1" d="M682.8,117.4l167,167"/>
+					<path class="cls-1" d="M682,118.2l65.3,65.3,65,65L849,285.2c1,1,2.6-.6,1.6-1.6l-65.3-65.3-65-65-36.7-36.7c-1-1-2.6.6-1.6,1.6Z"/>
+				</g>
+				<path class="cls-1" d="M850.5,285.7h510a1.1,1.1,0,0,0,0-2.2h-510a1.1,1.1,0,0,0,0,2.2Z"/>
+			</g>
+			<g class="line2">
+				<path class="cls-2" d="M65.5,201.7h450a1.1,1.1,0,0,0,0-2.2H65.5a1.1,1.1,0,0,0,0,2.2Z"/>
+				<g>
+					<path class="cls-2" d="M515.5,200.6l167-167"/>
+					<path class="cls-2" d="M516.3,201.4l65.3-65.3,65-65,36.7-36.7c1-1-.6-2.6-1.6-1.6L616.4,98.1l-65,65-36.7,36.7c-1,1,.6,2.6,1.6,1.6Z"/>
+				</g>
+				<g>
+					<path class="cls-2" d="M682.8,33.4l167,167"/>
+					<path class="cls-2" d="M682,34.2l65.3,65.3,65,65L849,201.2c1,1,2.6-.6,1.6-1.6l-65.3-65.3-65-65L683.6,32.6c-1-1-2.6.6-1.6,1.6Z"/>
+				</g>
+				<path class="cls-2" d="M850.5,201.7h450a1.1,1.1,0,0,0,0-2.2h-450a1.1,1.1,0,0,0,0,2.2Z"/>
+			</g>
+			<g class="line1">
+				<path class="cls-3" d="M85.5,172.7h430a1.1,1.1,0,0,0,0-2.2H85.5a1.1,1.1,0,0,0,0,2.2Z"/>
+				<g>
+					<path class="cls-3" d="M515.5,171.6l167-167"/>
+					<path class="cls-3" d="M516.3,172.4l65.3-65.3,65-65L683.3,5.4c1-1-.6-2.6-1.6-1.6L616.4,69.1l-65,65-36.7,36.7c-1,1,.6,2.6,1.6,1.6Z"/>
+				</g>
+				<g>
+					<path class="cls-3" d="M682.8,4.4l167,167"/>
+					<path class="cls-3" d="M682,5.2l65.3,65.3,65,65L849,172.2c1,1,2.6-.6,1.6-1.6l-65.3-65.3-65-65L683.6,3.6c-1-1-2.6.6-1.6,1.6Z"/>
+				</g>
+				<path class="cls-3" d="M850.5,172.7h430a1.1,1.1,0,0,0,0-2.2h-430a1.1,1.1,0,0,0,0,2.2Z"/>
+			</g>
+			<g class="line3">
+				<path class="cls-4" d="M45.5,231.7h470a1.1,1.1,0,0,0,0-2.2H45.5a1.1,1.1,0,0,0,0,2.2Z"/>
+				<g>
+					<path class="cls-4" d="M515.5,230.6l167-167"/>
+					<path class="cls-4" d="M516.3,231.4l65.3-65.3,65-65,36.7-36.7c1-1-.6-2.6-1.6-1.6l-65.3,65.3-65,65-36.7,36.7c-1,1,.6,2.6,1.6,1.6Z"/>
+				</g>
+				<g>
+					<path class="cls-4" d="M682.8,63.4l167,167"/>
+					<path class="cls-4" d="M682,64.2l65.3,65.3,65,65L849,231.2c1,1,2.6-.6,1.6-1.6l-65.3-65.3-65-65L683.6,62.6c-1-1-2.6.6-1.6,1.6Z"/>
+				</g>
+				<path class="cls-4" d="M850.5,231.7h470a1.1,1.1,0,0,0,0-2.2h-470a1.1,1.1,0,0,0,0,2.2Z"/>
+			</g>
+			<g class="line4">
+				<path class="cls-5" d="M25.5,259.7h490a1.1,1.1,0,0,0,0-2.2H25.5a1.1,1.1,0,0,0,0,2.2Z"/>
+				<g>
+					<path class="cls-5" d="M515.5,258.6l167-167"/>
+					<path class="cls-5" d="M516.3,259.4l65.3-65.3,65-65,36.7-36.7c1-1-.6-2.6-1.6-1.6l-65.3,65.3-65,65-36.7,36.7c-1,1,.6,2.6,1.6,1.6Z"/>
+				</g>
+				<g>
+					<path class="cls-5" d="M682.8,91.4l167,167"/>
+					<path class="cls-5" d="M682,92.2l65.3,65.3,65,65L849,259.2c1,1,2.6-.6,1.6-1.6l-65.3-65.3-65-65L683.6,90.6c-1-1-2.6.6-1.6,1.6Z"/>
+				</g>
+				<path class="cls-5" d="M850.5,259.7h490a1.1,1.1,0,0,0,0-2.2h-490a1.1,1.1,0,0,0,0,2.2Z"/>
+			</g>
+		</g>
+	</svg>
+	</div>`);
+		let articleGraph = document.querySelector('.article-graph');	
 		
 		/*right-bottom section*/
 
@@ -113,7 +200,6 @@ function pageLoad() {
 		/*counter article */
 		rightBottomSection.insertAdjacentHTML('beforeend', '<h1 class="counter-article"></h1>');
 		let counterArticle = document.querySelector('.counter-article');
-		counterArticle.innerHTML = "idejön a loading status bar és a számláló 00/05";
 
 }
 
