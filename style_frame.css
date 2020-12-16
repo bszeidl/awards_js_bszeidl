@@ -82,11 +82,13 @@ h1 {
 .blank-article1, .hero-title {
   height: 20vh;
   border: 1px solid white;
+  padding: 20px;
 }
 
 .hero-text {
   height: 30vh;
   line-height: 25px;
+  padding: 20px;
 }
 
 .blank-article2 {
@@ -171,7 +173,7 @@ h1 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border: 1px solid white;
-  padding: 70px 0;
+  padding: 0 0 70px 20px;
 }
 
 .counter-article {
@@ -191,6 +193,6 @@ h1 {
       -ms-flex-align: end;
           align-items: flex-end;
   border: 1px solid white;
-  padding: 70px;
+  padding: 0 20px 70px 0;
 }
 /*# sourceMappingURL=style_frame.css.map */
