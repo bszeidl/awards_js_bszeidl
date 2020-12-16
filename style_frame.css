@@ -228,7 +228,7 @@ body, html {
   width: 30vw;
   border: 1px solid white;
   padding: 70px;
-  margin-top: 30px;
+  margin-top: 10px;
   -webkit-animation: slide-up 7s linear;
           animation: slide-up 7s linear;
 }
