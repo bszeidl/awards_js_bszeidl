@@ -1,4 +1,5 @@
 @import 'svg';
+@import 'loading';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap');
 *,
@@ -7,6 +8,24 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+@keyframes showcontent {
+	from   { 
+		opacity: 0;
+	 }
+	 to   { 
+		opacity: 1;
+	 }
+}
+
+@keyframes hidecontent {
+	from   { 
+		opacity: 1;
+	 }
+	 to   { 
+		opacity: 0;
+	 }
 }
 
 a {
@@ -39,17 +58,6 @@ body, html {
 
 #root {
 	display: flex;
-	opacity: 0;
-	animation: cssAnimation 0s 4s forwards;
-}
-
-@keyframes cssAnimation {
-	from   { 
-		opacity: 0;
-	 }
-	 to   { 
-		opacity: 1;
-	 }
 }
 
 .left-section {
@@ -60,37 +68,30 @@ body, html {
 
 .slogan {
 	height: 50vh;
-	border: 1px solid white;
+	//border: 1px solid white;
 	color: lightgrey;
 	padding: 50px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	font-size: 22px;
 	line-height: 1em;
-	animation: slide-up 5s linear;
-	opacity: 1;
-	animation: cssAnimations 0s 4s forwards;
-}
-
-@keyframes cssAnimations {
-	from   { 
-		opacity: 1;
-	 }
-	 to   { 
-		opacity: 0;
-	 }
+	animation: slide-up 8s linear;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
 }
 
 .author {
 	display: flex;
 	font-weight: 400;
 	align-items: flex-end;
-	height: 50vh;
+	height: 49vh;
 	width: 30vw;
-	border: 1px solid white;
-	padding: 70px;
+	//border: 1px solid white;
+	padding: 70px 70px 50px 70px;
 	margin-top: 10px;
-	animation: slide-up 7s linear;
+	animation: slide-up 9s linear;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
 
 	@media (max-width: 1200px) {
 		display: none;
@@ -99,6 +100,8 @@ body, html {
 
 .middle-section {
 	width: 30vw;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
 
 	@media (max-width: 1024px) {
 		width: 600px;
@@ -113,13 +116,13 @@ h1 {
 
 .blank-article1, .hero-title  {
 	height: 20vh;
-	border: 1px solid white;
+	//border: 1px solid white;
 	padding: 20px;
 }
 
 .hero-title{
 	position: relative;
-	animation: slide-up 6s linear;
+	animation: slide-up 9s linear;
 	font-family: 'Roboto', sans-serif;
 	font-size: 72px;
 	font-weight: 400;
@@ -137,7 +140,7 @@ h1 {
 	line-height: 25px;
 	padding: 20px;
 	position: relative;
-	animation: slide-up 8s linear;
+	animation: slide-up 9s linear;
 	
 }
 
@@ -151,8 +154,8 @@ h1 {
 }
 
 .blank-article2 {
-	height: 5vh;
-	border: 1px solid white;
+	height: 5.5vh;
+	//border: 1px solid white;
 }
 
 .right-section {
@@ -163,17 +166,19 @@ h1 {
 
 .navSoc {
 	display: flex;
-	border: 1px solid white;
+	//border: 1px solid white;
 	height: 30vh;
 	color: lightgrey;
-	animation: slide-up 5s linear;
+	animation: slide-up 8s linear;
 }
 
 .navBar {
 	width: 55vw;
 	display: flex;
 	justify-content: space-around;
-	border: 1px solid white;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
+	//border: 1px solid white;
 
 	@media (max-width: 1024px) {
 		display: none;
@@ -188,6 +193,8 @@ h1 {
 	width: 35vw;
 	display: flex;
 	justify-content: space-around;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
 
 	@media (max-width: 1024px) {
 		justify-content: flex-end;
@@ -200,7 +207,7 @@ h1 {
 
 .blank-column {
 	width: 10vw;
-	border: 1px solid white;
+	//border: 1px solid white;
 
 	@media (max-width: 1024px) {
 		display: none;
@@ -213,8 +220,7 @@ h1 {
 	flex-direction: column;
 	justify-content: flex-end;
 	height: 60vh;
-	border: 1px solid white;
-	animation: slide-up 6s linear;
+  //border: 1px solid white;
 	align-content: center;
 
 	@media (max-width: 1024px) {
@@ -224,33 +230,73 @@ h1 {
 
 .right-bottom-section {
 	display: flex;
-	animation: slide-up 7s linear;
+	//animation: slide-up 7s linear;
+	justify-content: space-between;
 
 	@media (max-width: 1024px) {
 		display: none;
 	}
 }
 
-.prelude-article {
+.loading-prelude-cont{
+	position: relative;
+	//border: 1px solid white;
+}
+
+.prelude-article, .loading-article {
+	position: absolute;
 	height: 10vh;
 	width: 10vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	border: 1px solid white;
-	padding: 30px 0 70px 20px;
+  //border: 1px solid white;
+	padding: 30px 0 50px 20px;
 	font-weight: 400;
 }
 
-.counter-article {
-	height: 10vh;
-	width: 40vw;
+.prelude-article{
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
+}
+
+.loading-article{
+	opacity: 1;
+  animation: hidecontent 0s 8s forwards;
+}
+
+.counter-projectnumber-cont{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	align-items: flex-end;
-	border: 1px solid white;
-	padding: 0 20px 70px 0;
+	//border: 1px solid white;
+}
+
+.project-article {
+	//position: absolute;
+	height: 10vh;
+	//width: 40vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	//align-items: flex-end;
+  //border: 1px solid white;
+	padding: 50px 25px 50px 0;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
+}
+
+.counter-cont{
+	width: 100px;
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	padding: 50px 25px 48px 0;
+	opacity: 1;
+  animation: hidecontent 0s 8s forwards;
+	//border: 1px solid white;
+
 }
 
 .white-line{
@@ -258,7 +304,7 @@ h1 {
 	background-color: white;
 	max-width: 15%;
 	margin: 20px;
-	animation: slide-up 6s linear;
+	animation: slide-up 9s linear;
 }
 
 .menu{
@@ -272,5 +318,8 @@ h1 {
 
 svg{
 	max-width: 900px;
-	margin-bottom: 40px;
+	margin-bottom: 0;
+	opacity: 0;
+	animation: showcontent 0s 8s forwards;
 }
+

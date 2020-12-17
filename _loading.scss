@@ -1,0 +1,101 @@
+@keyframes hidecontent {
+	0%   { 
+		opacity: 1;
+	 }
+	 25%   { 
+		opacity: 0.75;
+	 }
+	 50%   { 
+		opacity: 0.5;
+	 }
+	 75%   { 
+		opacity: 0.25;
+	 }
+	 100%   { 
+		opacity: 0;
+	 }
+}
+
+ // Loading container
+ .loading {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 max-width: 90vw;
+	 opacity: 1;
+ 	 animation: hidecontent 0s 8s forwards;
+ }
+ 
+ /* Loading bar background */
+ .loading-bar {
+	position: relative;
+	max-width: 90vw;
+	height: 3px;
+	background-color: #2D2454;
+}
+/* loading bar progress */
+.loading-progress{
+	position: absolute;
+	width: 0px;
+	height: 3px;
+	background-color: #4F38A2;
+	animation: loading-progress 8s infinite linear; /*ease-in-out*/
+} 
+/* Animation progress line */
+@keyframes loading-progress {
+	0% { padding-right: 0vw; }
+	/*50% {padding-right: 25%;}*/
+	100% { padding-right: 47vw; }
+				/*{width: 40%;}*/
+}
+
+.percent {
+	padding-top: 4px;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+/* Numbers counter */
+.loop {
+position: absolute;
+width: 60px;
+height: 20px;
+overflow: hidden;
+color: white;
+font-family: 'Roboto', sans-serif;
+font-size: 24px;
+font-weight: 600;
+}
+.loop:after {
+position: absolute;
+margin-right: 10px;
+content: attr(data-val);
+line-height: 20px;
+text-align: center;
+animation: loop 9.5s linear infinite;
+}
+@keyframes loop {
+0% { margin-top: 0px; }
+5% { margin-top: 0px; }
+10% { margin-top: -20px; }
+15% { margin-top: -20px; }
+20% { margin-top: -40px; }
+25% { margin-top: -40px; }
+30% { margin-top: -60px; }
+35% { margin-top: -60px; }
+40% { margin-top: -80px; }
+45% { margin-top: -80px; }
+50% { margin-top: -100px; }
+55% { margin-top: -100px; }
+60% { margin-top: -120px; }
+65% { margin-top: -120px; }
+
+70% { margin-top: -140px; }
+79% { margin-top: -140px; }
+80% { margin-top: -160px; }
+89% { margin-top: -160px; }
+90% { margin-top: -180px; }
+99% { margin-top: -180px; }
+100% { margin-top: -200px; }
+}

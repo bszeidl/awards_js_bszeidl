@@ -184,7 +184,12 @@ function pageLoad() {
 			</g>
 		</g>
 	</svg>
-	</div>`);
+	<div class="loading">
+	<div class="loading-bar"></div> 
+	<div class="loading-progress"></div>
+	</div>
+	</div>
+	`);
 		let articleGraph = document.querySelector('.article-graph');	
 		
 		/*right-bottom section*/
@@ -193,13 +198,25 @@ function pageLoad() {
 		let rightBottomSection = document.querySelector('.right-bottom-section');
 		
 		/*prelude article */
-		rightBottomSection.insertAdjacentHTML('beforeend', '<h3 class="prelude-article"></h3>');
+		rightBottomSection.insertAdjacentHTML('beforeend', `<div class="loading-prelude-cont"><h3 class="prelude-article"></h3><h3 class="loading-article"></h3></div>`);
 		let preludeArticle = document.querySelector('.prelude-article');
 		preludeArticle.innerHTML = "Prelude";
+		let loadingArticle = document.querySelector('.loading-article');
+		loadingArticle.innerHTML = "Loading";
 
 		/*counter article */
-		rightBottomSection.insertAdjacentHTML('beforeend', '<h1 class="counter-article"></h1>');
-		let counterArticle = document.querySelector('.counter-article');
+		rightBottomSection.insertAdjacentHTML('beforeend', `
+			<div class="counter-projectnumber-cont">
+				<h2 class="project-article"></h2>
+				<div class="counter-cont">
+					<div class="loading-counter"></div>
+					<p class="percent">%</p>
+					<div class="loop" data-val="00 16 32 48 64 80 96 100"></div>
+				</div>
+			</div>
+			`);
+		let projectArticle = document.querySelector('.project-article');
+		projectArticle.innerHTML = "00/05"
 
 }
 
