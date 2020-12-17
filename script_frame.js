@@ -16,9 +16,9 @@ function pageLoad() {
 		let authorDiv = document.querySelector('.author');
 		authorDiv.innerHTML = "Max Niblock";
 
-	/* middle section */
-	rootDiv.insertAdjacentHTML('beforeend', '<div class="middle-section"></div>');
-	let middleSection = document.querySelector('.middle-section');
+		/* middle section */
+		rootDiv.insertAdjacentHTML('beforeend', '<div class="middle-section"></div>');
+		let middleSection = document.querySelector('.middle-section');
 	
 		/*blank articles1*/
 		middleSection.insertAdjacentHTML('afterbegin', '<div class="blank-article1"></div>');
@@ -44,9 +44,9 @@ function pageLoad() {
 		let blankArticle2 = document.querySelector('.blank-article2');
 		blankArticle2.innerHTML = "";
 	
-	/*right section navbar + language bar */
-	rootDiv.insertAdjacentHTML('beforeend', '<div class="right-section"></div>');
-	let rightSection = document.querySelector('.right-section');
+		/*right section navbar + language bar */
+		rootDiv.insertAdjacentHTML('beforeend', '<div class="right-section"></div>');
+		let rightSection = document.querySelector('.right-section');
 		
 		/*navbar and socialbar and linegraph and prelude*/
 		rightSection.insertAdjacentHTML('afterbegin', '<div class="navSoc"></div>');
@@ -189,7 +189,7 @@ function pageLoad() {
 	<div class="loading-progress"></div>
 	</div>
 	</div>
-	`);
+		`);
 		let articleGraph = document.querySelector('.article-graph');	
 		
 		/*right-bottom section*/
