@@ -182,7 +182,7 @@ g.line1 {
     width: 0vw;
   }
   100% {
-    width: 50vw;
+    width: 47vw;
   }
 }
 @keyframes loading-progress {
@@ -190,7 +190,7 @@ g.line1 {
     width: 0vw;
   }
   100% {
-    width: 50vw;
+    width: 47vw;
   }
 }
 
@@ -571,8 +571,9 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   opacity: 0;
   -webkit-animation: showcontent 0s 8s forwards;
           animation: showcontent 0s 8s forwards;

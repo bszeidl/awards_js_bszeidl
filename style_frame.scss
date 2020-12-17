@@ -192,7 +192,7 @@ h1 {
 .socialBar {
 	width: 35vw;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	opacity: 0;
 	animation: showcontent 0s 8s forwards;
 
