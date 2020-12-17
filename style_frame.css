@@ -162,7 +162,7 @@ g.line1 {
 .loading-bar {
   position: relative;
   max-width: 90vw;
-  height: 3px;
+  height: 2px;
   background-color: #2D2454;
 }
 
@@ -170,49 +170,44 @@ g.line1 {
 .loading-progress {
   position: absolute;
   width: 0px;
-  height: 3px;
+  height: 2px;
   background-color: #4F38A2;
-  -webkit-animation: loading-progress 8s infinite linear;
-          animation: loading-progress 8s infinite linear;
-  /*ease-in-out*/
+  -webkit-animation: loading-progress 7.5s linear forwards;
+          animation: loading-progress 7.5s linear forwards;
 }
 
 /* Animation progress line */
 @-webkit-keyframes loading-progress {
   0% {
-    padding-right: 0vw;
+    width: 0vw;
   }
-  /*50% {padding-right: 25%;}*/
   100% {
-    padding-right: 47vw;
+    width: 50vw;
   }
-  /*{width: 40%;}*/
 }
 @keyframes loading-progress {
   0% {
-    padding-right: 0vw;
+    width: 0vw;
   }
-  /*50% {padding-right: 25%;}*/
   100% {
-    padding-right: 47vw;
+    width: 50vw;
   }
-  /*{width: 40%;}*/
 }
 
 .percent {
   padding-top: 4px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: #E5E5E5;
 }
 
-/* Numbers counter */
+/* Numbers rolling counter */
 .loop {
   position: absolute;
   width: 60px;
   height: 20px;
   overflow: hidden;
-  color: white;
+  color: #E5E5E5;
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -224,73 +219,61 @@ g.line1 {
   content: attr(data-val);
   line-height: 20px;
   text-align: center;
-  -webkit-animation: loop 9.5s linear infinite;
-          animation: loop 9.5s linear infinite;
+  -webkit-animation: loop 9.5s linear forwards;
+          animation: loop 9.5s linear forwards;
 }
 
 @-webkit-keyframes loop {
   0% {
     margin-top: 0px;
   }
-  5% {
-    margin-top: 0px;
-  }
   10% {
-    margin-top: -20px;
+    margin-top: 0px;
   }
   15% {
     margin-top: -20px;
   }
   20% {
-    margin-top: -40px;
+    margin-top: -20px;
   }
   25% {
     margin-top: -40px;
   }
   30% {
-    margin-top: -60px;
+    margin-top: -40px;
   }
   35% {
     margin-top: -60px;
   }
   40% {
-    margin-top: -80px;
+    margin-top: -60px;
   }
   45% {
     margin-top: -80px;
   }
   50% {
-    margin-top: -100px;
+    margin-top: -80px;
   }
   55% {
     margin-top: -100px;
   }
   60% {
-    margin-top: -120px;
+    margin-top: -100px;
   }
   65% {
     margin-top: -120px;
   }
   70% {
-    margin-top: -140px;
+    margin-top: -120px;
   }
-  79% {
+  75% {
     margin-top: -140px;
   }
   80% {
-    margin-top: -160px;
+    margin-top: -140px;
   }
-  89% {
-    margin-top: -160px;
-  }
-  90% {
-    margin-top: -180px;
-  }
-  99% {
-    margin-top: -180px;
-  }
-  100% {
-    margin-top: -200px;
+  85% {
+    margin-top: -170px;
   }
 }
 
@@ -298,65 +281,53 @@ g.line1 {
   0% {
     margin-top: 0px;
   }
-  5% {
-    margin-top: 0px;
-  }
   10% {
-    margin-top: -20px;
+    margin-top: 0px;
   }
   15% {
     margin-top: -20px;
   }
   20% {
-    margin-top: -40px;
+    margin-top: -20px;
   }
   25% {
     margin-top: -40px;
   }
   30% {
-    margin-top: -60px;
+    margin-top: -40px;
   }
   35% {
     margin-top: -60px;
   }
   40% {
-    margin-top: -80px;
+    margin-top: -60px;
   }
   45% {
     margin-top: -80px;
   }
   50% {
-    margin-top: -100px;
+    margin-top: -80px;
   }
   55% {
     margin-top: -100px;
   }
   60% {
-    margin-top: -120px;
+    margin-top: -100px;
   }
   65% {
     margin-top: -120px;
   }
   70% {
-    margin-top: -140px;
+    margin-top: -120px;
   }
-  79% {
+  75% {
     margin-top: -140px;
   }
   80% {
-    margin-top: -160px;
+    margin-top: -140px;
   }
-  89% {
-    margin-top: -160px;
-  }
-  90% {
-    margin-top: -180px;
-  }
-  99% {
-    margin-top: -180px;
-  }
-  100% {
-    margin-top: -200px;
+  85% {
+    margin-top: -170px;
   }
 }
 
@@ -423,7 +394,7 @@ body {
 body, html {
   height: auto;
   background-color: #0d0d0d;
-  color: white;
+  color: #E5E5E5;
 }
 
 #root {
@@ -751,7 +722,7 @@ h1 {
 
 .white-line {
   height: 2px;
-  background-color: white;
+  background-color: #E5E5E5;
   max-width: 15%;
   margin: 20px;
   -webkit-animation: slide-up 9s linear;

@@ -202,7 +202,7 @@ function pageLoad() {
 		let preludeArticle = document.querySelector('.prelude-article');
 		preludeArticle.innerHTML = "Prelude";
 		let loadingArticle = document.querySelector('.loading-article');
-		loadingArticle.innerHTML = "Loading";
+		loadingArticle.innerHTML = "Loading:";
 
 		/*counter article */
 		rightBottomSection.insertAdjacentHTML('beforeend', `
@@ -216,7 +216,7 @@ function pageLoad() {
 			</div>
 			`);
 		let projectArticle = document.querySelector('.project-article');
-		projectArticle.innerHTML = "00/05"
+		projectArticle.innerHTML = "00 / 05"
 
 }
 

@@ -30,39 +30,40 @@
  .loading-bar {
 	position: relative;
 	max-width: 90vw;
-	height: 3px;
+	height: 2px;
 	background-color: #2D2454;
 }
+
 /* loading bar progress */
 .loading-progress{
 	position: absolute;
 	width: 0px;
-	height: 3px;
+	height: 2px;
 	background-color: #4F38A2;
-	animation: loading-progress 8s infinite linear; /*ease-in-out*/
+	animation: loading-progress 7.5s linear forwards;
 } 
+
 /* Animation progress line */
 @keyframes loading-progress {
-	0% { padding-right: 0vw; }
-	/*50% {padding-right: 25%;}*/
-	100% { padding-right: 47vw; }
-				/*{width: 40%;}*/
+	0% { width: 0vw; }
+	
+	100% { width: 50vw; }
 }
 
 .percent {
 	padding-top: 4px;
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
-	color: white;
+	color: #E5E5E5;
 }
 
-/* Numbers counter */
+/* Numbers rolling counter */
 .loop {
 position: absolute;
 width: 60px;
 height: 20px;
 overflow: hidden;
-color: white;
+color: #E5E5E5;
 font-family: 'Roboto', sans-serif;
 font-size: 24px;
 font-weight: 600;
@@ -73,29 +74,25 @@ margin-right: 10px;
 content: attr(data-val);
 line-height: 20px;
 text-align: center;
-animation: loop 9.5s linear infinite;
+animation: loop 9.5s linear forwards;
 }
+
 @keyframes loop {
 0% { margin-top: 0px; }
-5% { margin-top: 0px; }
-10% { margin-top: -20px; }
+10% { margin-top: 0px; }
 15% { margin-top: -20px; }
-20% { margin-top: -40px; }
+20% { margin-top: -20px; }
 25% { margin-top: -40px; }
-30% { margin-top: -60px; }
+30% { margin-top: -40px; }
 35% { margin-top: -60px; }
-40% { margin-top: -80px; }
+40% { margin-top: -60px; }
 45% { margin-top: -80px; }
-50% { margin-top: -100px; }
+50% { margin-top: -80px; }
 55% { margin-top: -100px; }
-60% { margin-top: -120px; }
+60% { margin-top: -100px; }
 65% { margin-top: -120px; }
-
-70% { margin-top: -140px; }
-79% { margin-top: -140px; }
-80% { margin-top: -160px; }
-89% { margin-top: -160px; }
-90% { margin-top: -180px; }
-99% { margin-top: -180px; }
-100% { margin-top: -200px; }
+70% { margin-top: -120px; }
+75% { margin-top: -140px; }
+80% { margin-top: -140px; }
+85% { margin-top: -170px; }
 }
